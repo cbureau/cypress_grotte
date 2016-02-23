@@ -1,0 +1,120 @@
+XH
+H 1 areas 11 global symbols
+M main.c
+S _ONOFF_Start Ref0000
+S _SPIS_1_EnableSS Ref0000
+S __rX Ref0000
+S _BP4_Start Ref0000
+S _BP6_Start Ref0000
+S _BP7_Start Ref0000
+S _SPIS_1_Start Ref0000
+S _ONOFF_Switch Ref0000
+S _SPIS_1_bReadRxData Ref0000
+S _SPIS_1_SetupTxData Ref0000
+S _SPIS_1_bReadStatus Ref0000
+S _BP4_Switch Ref0000
+S _BP6_Switch Ref0000
+S _BP7_Switch Ref0000
+A text size 109 flags 0
+dbfile ./main.c
+dbfile C:\Users\Claude\Desktop\INTERF~1\INTERF~1\INTERF~1\INTERF~1\main.c
+dbfunc e main 0 fV
+dbsym l val 0 c
+dbline FFFFFFFF 0
+dbline D 4
+dbline 10 4
+dbline 11 8
+dbline 12 8
+dbline 13 13
+dbline 13 13
+dbline 14 1A
+dbline 15 1F
+dbline 16 28
+dbline 17 2D
+dbline 18 36
+dbline 19 3B
+dbline 1A 44
+dbline 1B 44
+dbline 1C 4A
+dbline 1D 4F
+dbline 1E 55
+dbline 1F 55
+dbline 22 55
+dbline 23 5D
+dbline 25 66
+dbline 2C 6D
+dbline 2D 75
+dbline 2F 7E
+dbline 30 85
+dbline 11 85
+dbline FFFFFFFE 87
+dbline 0 8A
+dbfunc e Tempo 8C fV
+dbsym l i 0 L
+dbsym l val FFFFFFF9 L
+dbline FFFFFFFF 8C
+dbline 33 90
+dbline 35 90
+dbline 35 9E
+dbline 35 9E
+dbline 35 AA
+dbline FFFFFFFE C4
+dbline 0 C7
+dbfunc e init C8 fV
+dbline FFFFFFFF C8
+dbline 38 C8
+dbline 39 C8
+dbline 3A CE
+dbline 3B D1
+dbline 3C D4
+dbline 3D D7
+dbline 3E DB
+dbline 3F E9
+dbline 40 ED
+dbline 41 F3
+dbline 42 101
+dbline FFFFFFFE 108
+dbline 0 108
+S _main Def0000
+S _init Def00C8
+S _Tempo Def008C
+T 00 00 10 4F 38 01 90 C2 80 7E 10 7C 00 00 20 21
+R 00 00 00 00 02 0C 00 0A
+T 00 0E 08 39 08 B0 43 10 7C 00 00 20 54 00 3D 00
+R 00 00 00 00 02 09 00 08
+T 00 1C 55 B0 0A 10 50 01 7C 00 00 20 80 2E 3D 00
+R 00 00 00 00 02 09 00 0B
+T 00 2A 44 B0 0A 10 50 01 7C 00 00 20 80 20 3D 00
+R 00 00 00 00 02 09 00 0C
+T 00 38 50 B0 0A 10 50 01 7C 00 00 20 80 12 10 50
+R 00 00 00 00 02 09 00 0D
+T 00 46 00 7C 00 00 50 00 7C 00 00 50 00 7C 00 00
+R 00 00 00 00 02 04 00 0B 02 09 00 0C 02 0E 00 0D
+T 00 54 20 5D 00 21 01 39 01 B0 0A 10 50 61 7C
+R 00 00 00 00
+T 00 61 00 00 20 80 08 10 50 41 7C 00 00 20 5D 04
+R 00 00 00 00 02 02 00 09 02 0B 00 09
+T 00 6F 21 04 39 04 B0 0A 10 50 63 7C 00 00 20 80
+R 00 00 00 00 02 0C 00 09
+T 00 7D 08 10 50 43 7C 00 00 20 8F 82 38 FF 20 8F
+R 00 00 00 00 02 07 00 09
+T 00 8B FF 10 4F 38 04 56 00 00 56 01 00 56 02 00
+R 00 00 00 00
+T 00 99 56 03 00 80 0D 07 03 01 0F 02 00 0F 01 00
+R 00 00 00 00
+T 00 A7 0F 00 00 52 03 13 FC 52 02 1B FB 52 01 1B
+R 00 00 00 00
+T 00 B5 FA 52 F9 31 80 53 00 00 52 00 31 80 1A
+R 00 00 00 00 03 08 00 02
+T 00 C1 00 00 CF DB 38 FC 20 7F 10 50 00 7C 00 00
+R 00 00 00 00 03 02 00 02 02 0E 00 06
+T 00 CE 7C 00 00 7C 00 00 7C 00 00 7C
+R 00 00 00 00 02 03 00 00 02 06 00 03 02 09 00 04
+T 00 D8 00 00 20 50 00 08 08 50 27 08 50 10 08 9F
+R 00 00 00 00 02 02 00 05
+T 00 E6 A5 38 FC 10 7C 00 00 50 01 7C 00 00 20 50
+R 00 00 00 00 02 07 00 01 02 0C 00 07
+T 00 F4 00 08 08 50 C3 08 50 50 08 9F 8D 38 FC 10
+R 00 00 00 00
+T 01 02 50 00 7C 00 00 20 7F
+R 00 00 00 00 02 05 00 07

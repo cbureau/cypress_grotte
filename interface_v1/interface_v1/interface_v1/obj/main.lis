@@ -1,0 +1,295 @@
+                        .module main.c
+                        .area text(rom, con, rel)
+ 0000                   .dbfile ./main.c
+ 0000                   .dbfile C:\Users\Claude\Desktop\INTERF~1\INTERF~1\INTERF~1\INTERF~1\main.c
+ 0000                   .dbfunc e main _main fV
+ 0000           ;            val -> X+0
+ 0000           _main::
+ 0000                   .dbline -1
+ 0000 10                push X
+ 0001 4F                mov X,SP
+ 0002 3801              add SP,1
+ 0004                   .dbline 13
+ 0004           ; //----------------------------------------------------------------------------
+ 0004           ; // C main line
+ 0004           ; //----------------------------------------------------------------------------
+ 0004           ; 
+ 0004           ; #include <m8c.h>        // part specific constants and macros
+ 0004           ; #include "PSoCAPI.h"    // PSoC API definitions for all User Modules
+ 0004           ; #define LED1 0x01       // P0_0 
+ 0004           ; #define LED2 0x10             // P1_4
+ 0004           ; #define LED3 0x04             // P1_2
+ 0004           ; void Tempo(long);
+ 0004           ; void init(void);
+ 0004           ; void main(void)
+ 0004           ; {
+ 0004                   .dbline 16
+ 0004           ; unsigned char val;
+ 0004           ; //M8C_EnableGInt ; // Uncomment this line to enable Global Interrupts
+ 0004           ; init();
+ 0004 90C2              xcall _init
+ 0006 807E              xjmp L3
+ 0008           L2:
+ 0008                   .dbline 17
+ 0008           ; while(1){
+ 0008                   .dbline 18
+ 0008           ;       if((SPIS_1_bReadStatus() & SPIS_1_SPIS_RX_BUFFER_FULL)==SPIS_1_SPIS_RX_BUFFER_FULL){
+ 0008 10                push X
+ 0009 7C0000            xcall _SPIS_1_bReadStatus
+ 000C 20                pop X
+ 000D 2108              and A,8
+ 000F 3908              cmp A,8
+ 0011 B043              jnz L5
+ 0013                   .dbline 19
+ 0013           ;       val=SPIS_1_bReadRxData();
+ 0013                   .dbline 19
+ 0013 10                push X
+ 0014 7C0000            xcall _SPIS_1_bReadRxData
+ 0017 20                pop X
+ 0018 5400              mov [X+0],A
+ 001A                   .dbline 20
+ 001A           ;               if (val=='U')
+ 001A 3D0055            cmp [X+0],85
+ 001D B00A              jnz L7
+ 001F                   .dbline 21
+ 001F           ;               BP4_Switch(1);
+ 001F 10                push X
+ 0020 5001              mov A,1
+ 0022 7C0000            xcall _BP4_Switch
+ 0025 20                pop X
+ 0026 802E              xjmp L8
+ 0028           L7:
+ 0028                   .dbline 22
+ 0028           ;               else if(val=='D')
+ 0028 3D0044            cmp [X+0],68
+ 002B B00A              jnz L9
+ 002D                   .dbline 23
+ 002D           ;               BP6_Switch(1);
+ 002D 10                push X
+ 002E 5001              mov A,1
+ 0030 7C0000            xcall _BP6_Switch
+ 0033 20                pop X
+ 0034 8020              xjmp L10
+ 0036           L9:
+ 0036                   .dbline 24
+ 0036           ;               else if(val=='P')
+ 0036 3D0050            cmp [X+0],80
+ 0039 B00A              jnz L11
+ 003B                   .dbline 25
+ 003B           ;               BP7_Switch(1);
+ 003B 10                push X
+ 003C 5001              mov A,1
+ 003E 7C0000            xcall _BP7_Switch
+ 0041 20                pop X
+ 0042 8012              xjmp L12
+ 0044           L11:
+ 0044                   .dbline 26
+ 0044           ;               else {
+ 0044                   .dbline 27
+ 0044           ;               BP4_Switch(0);
+ 0044 10                push X
+ 0045 5000              mov A,0
+ 0047 7C0000            xcall _BP4_Switch
+ 004A                   .dbline 28
+ 004A           ;               BP6_Switch(0);
+ 004A 5000              mov A,0
+ 004C 7C0000            xcall _BP6_Switch
+ 004F                   .dbline 29
+ 004F           ;               BP7_Switch(0);
+ 004F 5000              mov A,0
+ 0051 7C0000            xcall _BP7_Switch
+ 0054 20                pop X
+ 0055                   .dbline 30
+ 0055           ;                       }
+ 0055           L12:
+ 0055           L10:
+ 0055           L8:
+ 0055                   .dbline 31
+ 0055           ;               }
+ 0055           L5:
+ 0055                   .dbline 34
+ 0055           ;       //if ((PRT0DR | ~LED1)== ~LED1)
+ 0055           ;       //SPIS_1_SetupTxData('A');
+ 0055           ;        if ((PRT0DR & LED1)== LED1)
+ 0055 5D00              mov A,REG[0]
+ 0057 2101              and A,1
+ 0059 3901              cmp A,1
+ 005B B00A              jnz L13
+ 005D                   .dbline 35
+ 005D           ;       SPIS_1_SetupTxData('a');
+ 005D 10                push X
+ 005E 5061              mov A,97
+ 0060 7C0000            xcall _SPIS_1_SetupTxData
+ 0063 20                pop X
+ 0064 8008              xjmp L14
+ 0066           L13:
+ 0066                   .dbline 37
+ 0066           ;       else 
+ 0066           ;        SPIS_1_SetupTxData('A');
+ 0066 10                push X
+ 0067 5041              mov A,65
+ 0069 7C0000            xcall _SPIS_1_SetupTxData
+ 006C 20                pop X
+ 006D           L14:
+ 006D                   .dbline 44
+ 006D           ;       //else if ((PRT1DR | ~LED2)== ~LED2)
+ 006D           ;       //SPIS_1_SetupTxData('B');
+ 006D           ;       //else if ((PRT0DR & LED2)== LED2)
+ 006D           ;       //SPIS_1_SetupTxData('b');      
+ 006D           ;       //if ((PRT1DR | ~LED3)== ~LED3)
+ 006D           ;       //SPIS_1_SetupTxData('C');
+ 006D           ;        if ((PRT1DR & LED3)== LED3)
+ 006D 5D04              mov A,REG[0x4]
+ 006F 2104              and A,4
+ 0071 3904              cmp A,4
+ 0073 B00A              jnz L15
+ 0075                   .dbline 45
+ 0075           ;       SPIS_1_SetupTxData('c');
+ 0075 10                push X
+ 0076 5063              mov A,99
+ 0078 7C0000            xcall _SPIS_1_SetupTxData
+ 007B 20                pop X
+ 007C 8008              xjmp L16
+ 007E           L15:
+ 007E                   .dbline 47
+ 007E           ;       else 
+ 007E           ;       SPIS_1_SetupTxData('C');
+ 007E 10                push X
+ 007F 5043              mov A,67
+ 0081 7C0000            xcall _SPIS_1_SetupTxData
+ 0084 20                pop X
+ 0085           L16:
+ 0085                   .dbline 48
+ 0085           ;       }
+ 0085           L3:
+ 0085                   .dbline 17
+ 0085 8F82              xjmp L2
+ 0087           X0:
+ 0087                   .dbline -2
+ 0087           L1:
+ 0087 38FF              add SP,-1
+ 0089 20                pop X
+ 008A                   .dbline 0 ; func end
+ 008A 8FFF              jmp .
+ 008C                   .dbsym l val 0 c
+ 008C                   .dbend
+ 008C                   .dbfunc e Tempo _Tempo fV
+ 008C           ;              i -> X+0
+ 008C           ;            val -> X-7
+ 008C           _Tempo::
+ 008C                   .dbline -1
+ 008C 10                push X
+ 008D 4F                mov X,SP
+ 008E 3804              add SP,4
+ 0090                   .dbline 51
+ 0090           ; }
+ 0090           ; /******************tempo***********************/
+ 0090           ; void Tempo(long val){
+ 0090                   .dbline 53
+ 0090           ; long i;
+ 0090           ; for (i=0;i<val;i++);
+ 0090 560000            mov [X+0],0
+ 0093 560100            mov [X+1],0
+ 0096 560200            mov [X+2],0
+ 0099 560300            mov [X+3],0
+ 009C 800D              xjmp L21
+ 009E           L18:
+ 009E                   .dbline 53
+ 009E           L19:
+ 009E                   .dbline 53
+ 009E 070301            add [X+3],1
+ 00A1 0F0200            adc [X+2],0
+ 00A4 0F0100            adc [X+1],0
+ 00A7 0F0000            adc [X+0],0
+ 00AA           L21:
+ 00AA                   .dbline 53
+ 00AA 5203              mov A,[X+3]
+ 00AC 13FC              sub A,[X-4]
+ 00AE 5202              mov A,[X+2]
+ 00B0 1BFB              sbb A,[X-5]
+ 00B2 5201              mov A,[X+1]
+ 00B4 1BFA              sbb A,[X-6]
+ 00B6 52F9              mov A,[X-7]
+ 00B8 3180              xor A,-128
+ 00BA 5300              mov [__rX],A
+ 00BC 5200              mov A,[X+0]
+ 00BE 3180              xor A,-128
+ 00C0 1A00              sbb A,[__rX]
+ 00C2 CFDB              jc L18
+ 00C4           X1:
+ 00C4                   .dbline -2
+ 00C4           L17:
+ 00C4 38FC              add SP,-4
+ 00C6 20                pop X
+ 00C7                   .dbline 0 ; func end
+ 00C7 7F                ret
+ 00C8                   .dbsym l i 0 L
+ 00C8                   .dbsym l val -7 L
+ 00C8                   .dbend
+ 00C8                   .dbfunc e init _init fV
+ 00C8           _init::
+ 00C8                   .dbline -1
+ 00C8                   .dbline 56
+ 00C8           ; }
+ 00C8           ; /********************initialisation*********************/
+ 00C8           ; void init(void){
+ 00C8                   .dbline 57
+ 00C8           ; SPIS_1_Start(SPIS_1_SPIS_MODE_0 | SPIS_1_SPIS_MSB_FIRST);
+ 00C8 10                push X
+ 00C9 5000              mov A,0
+ 00CB 7C0000            xcall _SPIS_1_Start
+ 00CE                   .dbline 58
+ 00CE           ;  ONOFF_Start(); 
+ 00CE 7C0000            xcall _ONOFF_Start
+ 00D1                   .dbline 59
+ 00D1           ;  BP4_Start();
+ 00D1 7C0000            xcall _BP4_Start
+ 00D4                   .dbline 60
+ 00D4           ;  BP6_Start();
+ 00D4 7C0000            xcall _BP6_Start
+ 00D7                   .dbline 61
+ 00D7           ;  BP7_Start();
+ 00D7 7C0000            xcall _BP7_Start
+ 00DA 20                pop X
+ 00DB                   .dbline 62
+ 00DB           ; Tempo(10000);
+ 00DB 5000              mov A,0
+ 00DD 08                push A
+ 00DE 08                push A
+ 00DF 5027              mov A,39
+ 00E1 08                push A
+ 00E2 5010              mov A,16
+ 00E4 08                push A
+ 00E5 9FA5              xcall _Tempo
+ 00E7 38FC              add SP,-4
+ 00E9                   .dbline 63
+ 00E9           ; SPIS_1_EnableSS();
+ 00E9 10                push X
+ 00EA 7C0000            xcall _SPIS_1_EnableSS
+ 00ED                   .dbline 64
+ 00ED           ;  ONOFF_Switch(1); // stiimsound ON
+ 00ED 5001              mov A,1
+ 00EF 7C0000            xcall _ONOFF_Switch
+ 00F2 20                pop X
+ 00F3                   .dbline 65
+ 00F3           ; Tempo(50000);
+ 00F3 5000              mov A,0
+ 00F5 08                push A
+ 00F6 08                push A
+ 00F7 50C3              mov A,-61
+ 00F9 08                push A
+ 00FA 5050              mov A,80
+ 00FC 08                push A
+ 00FD 9F8D              xcall _Tempo
+ 00FF 38FC              add SP,-4
+ 0101                   .dbline 66
+ 0101           ;  ONOFF_Switch(0); // stiimsound ON
+ 0101 10                push X
+ 0102 5000              mov A,0
+ 0104 7C0000            xcall _ONOFF_Switch
+ 0107 20                pop X
+ 0108                   .dbline -2
+ 0108           L22:
+ 0108                   .dbline 0 ; func end
+ 0108 7F                ret
+ 0109                   .dbend

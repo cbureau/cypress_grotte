@@ -1,0 +1,32 @@
+Starting MAKE...
+creating project.mk 
+
+lib/bp4.asm
+
+lib/bp6.asm
+
+lib/bp7.asm
+
+lib/onoff.asm
+
+lib/psocconfig.asm
+
+lib/psocconfigtbl.asm
+
+lib/spis_1.asm
+
+lib/spis_1int.asm
+
+./boot.asm
+
+Linking..
+
+  ROM 18% full. 707 out of 4096 bytes used (does not include absolute areas).
+
+  RAM 2% full. 3 bytes used (does not include stack usage).
+
+Built with ICCM8C STD V7.05.00
+
+ 
+interface_v1 - 0 error(s) 0 warning(s) 18:07:35
+

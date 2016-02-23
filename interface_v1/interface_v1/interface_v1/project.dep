@@ -1,0 +1,31 @@
+# DO NOT DELETE
+./obj/boot.o : \
+   C:/PROGRA~2/Cypress/PSOCDE~1/5.4/Common/CY110F~1/tools/include/CY8C21~2/m8c.inc\
+   C:/PROGRA~2/Cypress/PSOCDE~1/5.4/Common/CY110F~1/tools/include/CY8C21~2/m8ssc.inc\
+   C:\Users\Claude\Desktop\INTERF~1\INTERF~1\INTERF~1\INTERF~1\lib\GLOBAL~1.INC\
+   C:\Users\Claude\Desktop\INTERF~1\INTERF~1\INTERF~1\INTERF~1\memory.inc
+./obj/main.o :  ./lib/BP4.h ./lib/BP6.h ./lib/BP7.h ./lib/ONOFF.h\
+   ./lib/PSoCAPI.h ./lib/PSOCGP~1.H ./lib/SPIS_1.h\
+   C:/PROGRA~2/Cypress/PSOCDE~1/5.4/Common/CY110F~1/tools/include/CY8C21~2/m8c.h
+./lib/obj/bp4.o :  ./lib/BP4.inc\
+   C:/PROGRA~2/Cypress/PSOCDE~1/5.4/Common/CY110F~1/tools/include/CY8C21~2/m8c.inc\
+   C:\Users\Claude\Desktop\INTERF~1\INTERF~1\INTERF~1\INTERF~1\memory.inc
+./lib/obj/bp6.o :  ./lib/BP6.inc\
+   C:/PROGRA~2/Cypress/PSOCDE~1/5.4/Common/CY110F~1/tools/include/CY8C21~2/m8c.inc\
+   C:\Users\Claude\Desktop\INTERF~1\INTERF~1\INTERF~1\INTERF~1\memory.inc
+./lib/obj/bp7.o :  ./lib/BP7.inc\
+   C:/PROGRA~2/Cypress/PSOCDE~1/5.4/Common/CY110F~1/tools/include/CY8C21~2/m8c.inc\
+   C:\Users\Claude\Desktop\INTERF~1\INTERF~1\INTERF~1\INTERF~1\memory.inc
+./lib/obj/onoff.o :  ./lib/ONOFF.inc\
+   C:/PROGRA~2/Cypress/PSOCDE~1/5.4/Common/CY110F~1/tools/include/CY8C21~2/m8c.inc\
+   C:\Users\Claude\Desktop\INTERF~1\INTERF~1\INTERF~1\INTERF~1\memory.inc
+./lib/obj/psocconfig.o :  ./lib/GLOBAL~1.INC\
+   C:/PROGRA~2/Cypress/PSOCDE~1/5.4/Common/CY110F~1/tools/include/CY8C21~2/m8c.inc\
+   C:\Users\Claude\Desktop\INTERF~1\INTERF~1\INTERF~1\INTERF~1\memory.inc
+./lib/obj/psocconfigtbl.o : \
+   C:/PROGRA~2/Cypress/PSOCDE~1/5.4/Common/CY110F~1/tools/include/CY8C21~2/m8c.inc
+./lib/obj/spis_1.o :  ./lib/SPIS_1.inc\
+   C:/PROGRA~2/Cypress/PSOCDE~1/5.4/Common/CY110F~1/tools/include/CY8C21~2/m8c.inc\
+   C:\Users\Claude\Desktop\INTERF~1\INTERF~1\INTERF~1\INTERF~1\memory.inc
+./lib/obj/spis_1int.o :  ./lib/SPIS_1.inc\
+   C:/PROGRA~2/Cypress/PSOCDE~1/5.4/Common/CY110F~1/tools/include/CY8C21~2/m8c.inc

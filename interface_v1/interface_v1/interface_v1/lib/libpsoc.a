@@ -1,0 +1,577 @@
+.start
+XH
+H 3 areas 1 global symbols
+M spis_1int.asm
+A text size 0 flags 0
+dbfile lib/spis_1int.asm
+dbfunc 0 ? 0 I
+dbfile SPIS_1.inc
+dbfunc 0 ? 0 I
+dbfile C:/PROGRA~2/Cypress/PSOCDE~1/5.4/Common/CY110F~1/tools/include/CY8C21~2/m8c.inc
+dbfunc 0 ? 0 I
+dbfile ./lib/SPIS_1.inc
+dbfunc 0 ? 0 I
+dbfile lib/spis_1int.asm
+dbfunc 0 ? 0 I
+dbfile C:/PROGRA~2/Cypress/PSOCDE~1/5.4/Common/CY110F~1/tools/include/CY8C21~2/m8c.inc
+dbfunc 0 ? 0 I
+A InterruptRAM size 0 flags 20
+A UserModules size 1 flags 0
+dbfile lib/spis_1int.asm
+dbfunc 0 ? 0 I
+dbline 5A 0
+S _SPIS_1_ISR Def0000
+T 00 00 7E
+R 00 00 00 02
+.end
+.start
+XH
+H 2 areas 2C global symbols
+M spis_1.asm
+A text size 0 flags 0
+dbfile lib/spis_1.asm
+dbfunc 0 ? 0 I
+dbfile SPIS_1.inc
+dbfunc 0 ? 0 I
+dbfile C:/PROGRA~2/Cypress/PSOCDE~1/5.4/Common/CY110F~1/tools/include/CY8C21~2/m8c.inc
+dbfunc 0 ? 0 I
+dbfile ./lib/SPIS_1.inc
+dbfunc 0 ? 0 I
+dbfile lib/spis_1.asm
+dbfunc 0 ? 0 I
+dbfile memory.inc
+dbfunc 0 ? 0 I
+dbfile lib/spis_1.asm
+dbfunc 0 ? 0 I
+dbfile C:/PROGRA~2/Cypress/PSOCDE~1/5.4/Common/CY110F~1/tools/include/CY8C21~2/m8c.inc
+dbfunc 0 ? 0 I
+A UserModules size 2A flags 0
+dbfile lib/spis_1.asm
+dbfunc 0 ? 0 I
+dbline 2 0
+dbline 64 3
+dbline 2 4
+dbline 82 7
+dbline A4 8
+dbline A5 A
+dbline A7 C
+dbline C3 D
+dbline C5 10
+dbline E2 11
+dbline E4 13
+dbline 103 14
+dbline 105 16
+dbline 124 17
+dbline 126 19
+dbline 2 1A
+dbline 14A 1C
+dbline 2 1F
+dbline 14D 21
+dbline 2 22
+dbline 16F 24
+dbline 2 27
+dbline 172 29
+S SPIS_1_SetSS Def001A
+S SPIS_1_DisableInt Def0004
+S _SPIS_1_ClearSS Def0022
+S SPIS_1_EnableSS Def0022
+S $sb$SPIS_1_DisableInt Def0004
+S $se$SPIS_1_DisableInt Def0008
+S _SPIS_1_Stop Def000D
+S $sb$SPIS_1_EnableSS Def0022
+S $se$SPIS_1_EnableSS Def002A
+S SPIS_1_Start Def0008
+S bSPIS_1_ReadRxData Def0014
+S SPIS_1_bReadRxData Def0014
+S $sb$SPIS_1_Start Def0008
+S $se$SPIS_1_Start Def000D
+S _SPIS_1_SetSS Def001A
+S _SPIS_1_DisableInt Def0004
+S $sb$SPIS_1_bReadRxData Def0014
+S $se$SPIS_1_bReadRxData Def0017
+S _SPIS_1_EnableSS Def0022
+S SPIS_1_SetupTxData Def0011
+S SPIS_1_DisableSS Def001A
+S bSPIS_1_ReadStatus Def0017
+S SPIS_1_bReadStatus Def0017
+S _SPIS_1_Start Def0008
+S SPIS_1_EnableInt Def0000
+S $sb$SPIS_1_SetupTxData Def0011
+S $sb$SPIS_1_DisableSS Def001A
+S $se$SPIS_1_SetupTxData Def0014
+S $se$SPIS_1_DisableSS Def0022
+S $sb$SPIS_1_bReadStatus Def0017
+S _bSPIS_1_ReadRxData Def0014
+S _SPIS_1_bReadRxData Def0014
+S $se$SPIS_1_bReadStatus Def001A
+S SPIS_1_ClearSS Def0022
+S $sb$SPIS_1_EnableInt Def0000
+S $se$SPIS_1_EnableInt Def0004
+S SPIS_1_Stop Def000D
+S _SPIS_1_SetupTxData Def0011
+S _SPIS_1_DisableSS Def001A
+S _bSPIS_1_ReadStatus Def0017
+S _SPIS_1_bReadStatus Def0017
+S $sb$SPIS_1_Stop Def000D
+S $se$SPIS_1_Stop Def0011
+S _SPIS_1_EnableInt Def0000
+T 00 00 43 E1 04 7F 41 E1 FB 7F 29 01 60 2B 7F 41
+R 00 00 00 01
+T 00 0E 2B FE 7F 60 29 7F 5D 2A 7F 5D 2B 7F 71 10
+R 00 00 00 01
+T 00 1C 43 2A 08 70 EF 7F 71 10 41 2A F7 70 EF 7F
+R 00 00 00 01
+.end
+.start
+XH
+H 3 areas 3 global symbols
+M psocconfigtbl.asm
+A text size 0 flags 0
+dbfile lib/psocconfigtbl.asm
+dbfunc 0 ? 0 I
+dbfile C:/PROGRA~2/Cypress/PSOCDE~1/5.4/Common/CY110F~1/tools/include/CY8C21~2/m8c.inc
+dbfunc 0 ? 0 I
+A lit size 46 flags 0
+S LoadConfigTBL_telecommande_clem_2_Bank0 Def0000
+S LoadConfigTBL_telecommande_clem_2_Bank1 Def0023
+A psoc_config size 45 flags 0
+dbfile lib/psocconfigtbl.asm
+dbfunc 0 ? 0 I
+dbline 2 0
+dbline 4E 2
+dbline 2 5
+dbline 50 7
+dbline 51 A
+dbline 2 D
+dbline 53 F
+dbline 54 12
+dbline 2 15
+dbline 56 17
+dbline 57 1A
+dbline 2 1D
+dbline 59 1F
+dbline 5A 22
+dbline 2 25
+dbline 5C 27
+dbline 5D 2A
+dbline 2 2D
+dbline 5F 2F
+dbline 60 32
+dbline 2 35
+dbline 62 37
+dbline 63 3A
+dbline 2 3D
+dbline 65 3F
+dbline 2 42
+dbline 67 44
+S LoadConfigTBL_telecommande_clem_2_Ordered Def0000
+T 00 00 2B 00 29 00 2A 00 60 09 64 00 66 00 E6 00
+R 00 00 00 01
+T 00 0E E7 00 D6 00 62 00 B0 64 B1 00 B2 00 B3 31
+R 00 00 00 01
+T 00 1C B4 33 B5 02 B6 10 FF 28 0E 29 FD 2A 2F 61
+R 00 00 00 01
+T 00 2A 00 60 00 62 00 67 33 64 00 D1 00 D3 00 D0
+R 00 00 00 01
+T 00 38 00 D2 00 E1 DF E2 00 DF C7 DE 00 DD 00 FF
+R 00 00 00 01
+T 00 00 70 EF 62 00 00 71 10 62 00 5E 62 01 A1 70
+R 00 00 00 02
+T 00 0E EF 62 03 00 62 02 A8 71 10 62 02 00 62 03
+R 00 00 00 02
+T 00 1C 00 70 EF 62 01 00 62 04 00 71 10 62 04 00
+R 00 00 00 02
+T 00 2A 62 05 17 70 EF 62 07 03 62 06 00 71 10 62
+R 00 00 00 02
+T 00 38 06 00 62 07 00 70 EF 62 05 00 70 EF 7F
+R 00 00 00 02
+.end
+.start
+XH
+H 3 areas B global symbols
+M psocconfig.asm
+S LoadConfigTBL_telecommande_clem_2_Bank0 Ref0000
+S LoadConfigTBL_telecommande_clem_2_Bank1 Ref0000
+S LoadConfigTBL_telecommande_clem_2_Ordered Ref0000
+A text size 0 flags 0
+dbfile lib/psocconfig.asm
+dbfunc 0 ? 0 I
+dbfile ./lib/GlobalParams.inc
+dbfunc 0 ? 0 I
+dbfile lib/psocconfig.asm
+dbfunc 0 ? 0 I
+dbfile memory.inc
+dbfunc 0 ? 0 I
+dbfile lib/psocconfig.asm
+dbfunc 0 ? 0 I
+dbfile C:/PROGRA~2/Cypress/PSOCDE~1/5.4/Common/CY110F~1/tools/include/CY8C21~2/m8c.inc
+dbfunc 0 ? 0 I
+A psoc_config size 61 flags 0
+dbfile lib/psocconfig.asm
+dbfunc 0 ? 0 I
+dbline 3D 0
+dbline 3F 3
+dbline 40 6
+dbline 44 9
+dbline 5D A
+dbline 2 B
+dbline 5F D
+dbline 60 F
+dbline 62 10
+dbline 63 12
+dbline 64 14
+dbline 66 17
+dbline 67 19
+dbline 69 1A
+dbline 6A 1C
+dbline 6B 1E
+dbline 2 21
+dbline 6E 23
+dbline 71 24
+dbline 87 25
+dbline 88 27
+dbline 89 28
+dbline 8A 29
+dbline 8B 2A
+dbline 8C 2D
+dbline 8D 2F
+dbline 8F 32
+dbline 90 33
+dbline 2 34
+dbline 2 36
+dbline 95 39
+dbline 96 3A
+dbline 97 3B
+dbline 98 3C
+dbline 99 3E
+dbline 9A 40
+dbline 9B 41
+dbline 9C 44
+dbline 2 46
+dbline 9F 48
+dbline A0 4A
+dbline A1 4B
+dbline A2 4C
+dbline A3 4D
+dbline A4 4F
+dbline A5 50
+dbline A6 51
+dbline A7 52
+dbline A8 53
+dbline A9 55
+dbline AA 57
+dbline AB 58
+dbline AC 59
+dbline AD 5A
+dbline AE 5C
+dbline B0 5E
+dbline B2 60
+S _LoadConfig_telecommande_clem_2 Def000A
+S LoadConfigInit Def0000
+S LoadConfig_telecommande_clem_2 Def000A
+S _LoadConfigInit Def0000
+A InterruptRAM size 1 flags 20
+S _NO_SHADOW Def0000
+S _Port_0_Data_SHADE Def0000
+S NO_SHADOW Def0000
+S Port_0_Data_SHADE Def0000
+T 00 00 55 00 00 00 7C 00 0A 7C 00 00 7F 10 70 EF
+R 00 00 00 01 01 03 00 02 00 07 00 01 02 0A 00 02
+T 00 0D 50 00 67 50 00 00 57 00 00 7C 00 25 50 01
+R 00 00 00 01 43 06 00 00 03 09 00 00 00 0C 00 01
+T 00 19 67 50 00 00 57 00 00 7C 00 25 70 EF 20 7F
+R 00 00 00 01 43 04 00 01 03 07 00 01 00 0A 00 01
+T 00 25 38 02 10 08 4F 56 FC 00 D0 04 56 FC 01 18
+R 00 00 00 01
+T 00 33 20 70 EF 62 E3 00 10 08 28 39 FF A0 1F 4F
+R 00 00 00 01
+T 00 41 48 FC 01 A0 03 71 10 54 FD 18 20 75 09 00
+R 00 00 00 01
+T 00 4F 10 08 28 4F 59 FD 61 00 18 20 75 09 00 8F
+R 00 00 00 01
+T 00 5D D7 38 FC 7F
+R 00 00 00 01
+.end
+.start
+XH
+H 2 areas 15 global symbols
+M onoff.asm
+S Port_0_Data_SHADE Ref0000
+A text size 0 flags 0
+dbfile lib/onoff.asm
+dbfunc 0 ? 0 I
+dbfile memory.inc
+dbfunc 0 ? 0 I
+dbfile lib/onoff.asm
+dbfunc 0 ? 0 I
+dbfile ONOFF.inc
+dbfunc 0 ? 0 I
+dbfile C:/PROGRA~2/Cypress/PSOCDE~1/5.4/Common/CY110F~1/tools/include/CY8C21~2/m8c.inc
+dbfunc 0 ? 0 I
+dbfile ./lib/ONOFF.inc
+dbfunc 0 ? 0 I
+A UserModules size 28 flags 0
+dbfile lib/onoff.asm
+dbfunc 0 ? 0 I
+dbline 50 0
+dbline 51 2
+dbline 59 4
+dbline 61 6
+dbline 62 8
+dbline 66 A
+dbline 6A D
+dbline 6E F
+dbline 74 12
+dbline 75 14
+dbline 79 16
+dbline 95 17
+dbline 96 1A
+dbline 97 1C
+dbline 9B 1E
+dbline B6 1F
+dbline BC 21
+dbline BD 23
+dbline BE 25
+dbline C3 27
+S $sb$_ONOFF_On Def0000
+S $se$_ONOFF_On Def0017
+S _ONOFF_Start Def0004
+S ONOFF_Switch Def0006
+S ONOFF_Invert Def0017
+S _ONOFF_Off Def0004
+S _ONOFF_GetState Def001F
+S $sb$_ONOFF_GetState Def001F
+S $se$_ONOFF_GetState Def0028
+S ONOFF_Stop Def0004
+S ONOFF_On Def0000
+S _ONOFF_Switch Def0006
+S _ONOFF_Invert Def0017
+S $sb$_ONOFF_Invert Def0017
+S $se$_ONOFF_Invert Def001F
+S _ONOFF_Stop Def0004
+S ONOFF_Start Def0004
+S ONOFF_Off Def0004
+S _ONOFF_On Def0000
+S ONOFF_GetState Def001F
+T 00 00 50 01 80 03 50 00 29 00 A0 06 2E 00 00 02
+R 00 00 00 01 03 0D 00 00
+T 00 0D 80 04 26 00 00 FD 51 00 00 60 00 7F 36
+R 00 00 00 01 03 05 00 00 03 09 00 00
+T 00 18 00 00 02 51 00 00 60 00 7F 51 00 00 21 02
+R 00 00 00 01 03 02 00 00 03 06 00 00 03 0C 00 00
+T 00 23 A0 03 50 01 7F
+R 00 00 00 01
+.end
+.start
+XH
+H 2 areas 15 global symbols
+M bp7.asm
+S Port_0_Data_SHADE Ref0000
+A text size 0 flags 0
+dbfile lib/bp7.asm
+dbfunc 0 ? 0 I
+dbfile memory.inc
+dbfunc 0 ? 0 I
+dbfile lib/bp7.asm
+dbfunc 0 ? 0 I
+dbfile BP7.inc
+dbfunc 0 ? 0 I
+dbfile C:/PROGRA~2/Cypress/PSOCDE~1/5.4/Common/CY110F~1/tools/include/CY8C21~2/m8c.inc
+dbfunc 0 ? 0 I
+dbfile ./lib/BP7.inc
+dbfunc 0 ? 0 I
+A UserModules size 29 flags 0
+dbfile lib/bp7.asm
+dbfunc 0 ? 0 I
+dbline 50 0
+dbline 51 2
+dbline 59 4
+dbline 61 6
+dbline 62 8
+dbline 68 A
+dbline 6A D
+dbline 70 F
+dbline 74 12
+dbline 75 14
+dbline 79 16
+dbline 95 17
+dbline 96 1A
+dbline 97 1C
+dbline 9B 1E
+dbline B6 1F
+dbline BA 21
+dbline BC 22
+dbline BD 24
+dbline BE 26
+dbline C3 28
+S $sb$_BP7_Invert Def0017
+S $se$_BP7_Invert Def001F
+S _BP7_Stop Def0004
+S BP7_Start Def0004
+S BP7_Off Def0004
+S _BP7_On Def0000
+S BP7_GetState Def001F
+S $sb$_BP7_On Def0000
+S $se$_BP7_On Def0017
+S _BP7_Start Def0004
+S BP7_Switch Def0006
+S BP7_Invert Def0017
+S _BP7_Off Def0004
+S _BP7_GetState Def001F
+S $sb$_BP7_GetState Def001F
+S $se$_BP7_GetState Def0029
+S BP7_Stop Def0004
+S BP7_On Def0000
+S _BP7_Switch Def0006
+S _BP7_Invert Def0017
+T 00 00 50 01 80 03 50 00 29 00 A0 06 26 00 00 EF
+R 00 00 00 01 03 0D 00 00
+T 00 0D 80 04 2E 00 00 10 51 00 00 60 00 7F 36
+R 00 00 00 01 03 05 00 00 03 09 00 00
+T 00 18 00 00 10 51 00 00 60 00 7F 51 00 00 73 21
+R 00 00 00 01 03 02 00 00 03 06 00 00 03 0C 00 00
+T 00 23 10 A0 03 50 01 7F
+R 00 00 00 01
+.end
+.start
+XH
+H 2 areas 15 global symbols
+M bp6.asm
+S Port_0_Data_SHADE Ref0000
+A text size 0 flags 0
+dbfile lib/bp6.asm
+dbfunc 0 ? 0 I
+dbfile memory.inc
+dbfunc 0 ? 0 I
+dbfile lib/bp6.asm
+dbfunc 0 ? 0 I
+dbfile BP6.inc
+dbfunc 0 ? 0 I
+dbfile C:/PROGRA~2/Cypress/PSOCDE~1/5.4/Common/CY110F~1/tools/include/CY8C21~2/m8c.inc
+dbfunc 0 ? 0 I
+dbfile ./lib/BP6.inc
+dbfunc 0 ? 0 I
+A UserModules size 29 flags 0
+dbfile lib/bp6.asm
+dbfunc 0 ? 0 I
+dbline 50 0
+dbline 51 2
+dbline 59 4
+dbline 61 6
+dbline 62 8
+dbline 68 A
+dbline 6A D
+dbline 70 F
+dbline 74 12
+dbline 75 14
+dbline 79 16
+dbline 95 17
+dbline 96 1A
+dbline 97 1C
+dbline 9B 1E
+dbline B6 1F
+dbline BA 21
+dbline BC 22
+dbline BD 24
+dbline BE 26
+dbline C3 28
+S $sb$_BP6_Invert Def0017
+S $se$_BP6_Invert Def001F
+S _BP6_Stop Def0004
+S BP6_Start Def0004
+S BP6_Off Def0004
+S _BP6_On Def0000
+S BP6_GetState Def001F
+S $sb$_BP6_On Def0000
+S $se$_BP6_On Def0017
+S _BP6_Start Def0004
+S BP6_Switch Def0006
+S BP6_Invert Def0017
+S _BP6_Off Def0004
+S _BP6_GetState Def001F
+S $sb$_BP6_GetState Def001F
+S $se$_BP6_GetState Def0029
+S BP6_Stop Def0004
+S BP6_On Def0000
+S _BP6_Switch Def0006
+S _BP6_Invert Def0017
+T 00 00 50 01 80 03 50 00 29 00 A0 06 26 00 00 FB
+R 00 00 00 01 03 0D 00 00
+T 00 0D 80 04 2E 00 00 04 51 00 00 60 00 7F 36
+R 00 00 00 01 03 05 00 00 03 09 00 00
+T 00 18 00 00 04 51 00 00 60 00 7F 51 00 00 73 21
+R 00 00 00 01 03 02 00 00 03 06 00 00 03 0C 00 00
+T 00 23 04 A0 03 50 01 7F
+R 00 00 00 01
+.end
+.start
+XH
+H 2 areas 15 global symbols
+M bp4.asm
+S Port_0_Data_SHADE Ref0000
+A text size 0 flags 0
+dbfile lib/bp4.asm
+dbfunc 0 ? 0 I
+dbfile memory.inc
+dbfunc 0 ? 0 I
+dbfile lib/bp4.asm
+dbfunc 0 ? 0 I
+dbfile BP4.inc
+dbfunc 0 ? 0 I
+dbfile C:/PROGRA~2/Cypress/PSOCDE~1/5.4/Common/CY110F~1/tools/include/CY8C21~2/m8c.inc
+dbfunc 0 ? 0 I
+dbfile ./lib/BP4.inc
+dbfunc 0 ? 0 I
+A UserModules size 29 flags 0
+dbfile lib/bp4.asm
+dbfunc 0 ? 0 I
+dbline 50 0
+dbline 51 2
+dbline 59 4
+dbline 61 6
+dbline 62 8
+dbline 68 A
+dbline 6A D
+dbline 70 F
+dbline 74 12
+dbline 75 14
+dbline 79 16
+dbline 95 17
+dbline 96 1A
+dbline 97 1C
+dbline 9B 1E
+dbline B6 1F
+dbline BA 21
+dbline BC 22
+dbline BD 24
+dbline BE 26
+dbline C3 28
+S $sb$_BP4_Invert Def0017
+S $se$_BP4_Invert Def001F
+S _BP4_Stop Def0004
+S BP4_Start Def0004
+S BP4_Off Def0004
+S _BP4_On Def0000
+S BP4_GetState Def001F
+S $sb$_BP4_On Def0000
+S $se$_BP4_On Def0017
+S _BP4_Start Def0004
+S BP4_Switch Def0006
+S BP4_Invert Def0017
+S _BP4_Off Def0004
+S _BP4_GetState Def001F
+S $sb$_BP4_GetState Def001F
+S $se$_BP4_GetState Def0029
+S BP4_Stop Def0004
+S BP4_On Def0000
+S _BP4_Switch Def0006
+S _BP4_Invert Def0017
+T 00 00 50 01 80 03 50 00 29 00 A0 06 26 00 00 BF
+R 00 00 00 01 03 0D 00 00
+T 00 0D 80 04 2E 00 00 40 51 00 00 60 00 7F 36
+R 00 00 00 01 03 05 00 00 03 09 00 00
+T 00 18 00 00 40 51 00 00 60 00 7F 51 00 00 73 21
+R 00 00 00 01 03 02 00 00 03 06 00 00 03 0C 00 00
+T 00 23 40 A0 03 50 01 7F
+R 00 00 00 01
+.end
